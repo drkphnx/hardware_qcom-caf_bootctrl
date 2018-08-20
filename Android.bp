@@ -1,0 +1,20 @@
+soong_namespace {
+}
+
+cc_defaults {
+    name: "bootctrl_hal_defaults",
+    defaults: ["hidl_defaults"],
+    header_libs: [
+        "libhardware_headers",
+        "libsystem_headers",
+    ],
+    vendor: true,
+    recovery_available: true,
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "libz",
+    ],
+    srcs: ["boot_control.cpp"],
+    relative_install_path: "hw",
+}
