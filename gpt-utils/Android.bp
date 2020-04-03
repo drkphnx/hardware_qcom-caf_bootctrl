@@ -5,6 +5,9 @@
 
 cc_library {
     name: "libgptutils.qcom",
+    cflags: [
+        "-D_BSG_FRAMEWORK_KERNEL_HEADERS",
+    ],
     defaults: ["hidl_defaults"],
     export_include_dirs: ["."],
     header_libs: [
@@ -16,6 +19,9 @@ cc_library {
         "liblog",
         "libz",
     ],
-    srcs: ["gpt-utils.cpp"],
+    srcs: [
+        "gpt-utils.cpp",
+        "recovery-ufs-bsg.cpp",
+    ],
     vendor: true,
 }
