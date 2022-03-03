@@ -6,6 +6,7 @@ cc_library {
         "android.hardware.boot@1.1",
         "libbase",
         "libcutils",
+        "libgptutils.qcom",
         "liblog",
         "libz",
     ],
