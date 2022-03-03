@@ -18,3 +18,9 @@ cc_defaults {
     srcs: ["boot_control.cpp"],
     relative_install_path: "hw",
 }
+
+cc_library {
+    name: "bootctrl.qcom",
+    defaults: ["bootctrl_hal_defaults"],
+    static_libs: ["libgptutils.qcom"],
+}
