@@ -1,6 +1,3 @@
-soong_namespace {
-}
-
 cc_defaults {
     name: "bootctrl_hal_defaults",
     defaults: ["hidl_defaults"],
